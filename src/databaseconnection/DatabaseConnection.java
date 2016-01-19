@@ -14,9 +14,12 @@ import java.math.*; // for BigDecimal and BigInteger support
 public class DatabaseConnection {
 
     public void insert() {
+        
     }
 
     public static void main(String[] args) {
+        //Change cs1.ucc.ie to your own server
+        //Change 3306 to a port number 
         String url = "jdbc:mysql://cs1.ucc.ie:3306/";
         String dbName = "2016_ajh3";
         String driver = "com.mysql.jdbc.Driver";
