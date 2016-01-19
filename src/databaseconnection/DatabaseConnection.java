@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package databaseconnection;
 
 /**
@@ -13,7 +9,11 @@ import java.math.*; // for BigDecimal and BigInteger support
 
 public class DatabaseConnection {
 
+    //Just some methods i will update to show how to return/insert and delete info
     public void insert() {
+        
+    }
+    public void getInfo(){
         
     }
 
@@ -21,9 +21,13 @@ public class DatabaseConnection {
         //Change cs1.ucc.ie to your own server
         //Change 3306 to a port number 
         String url = "jdbc:mysql://cs1.ucc.ie:3306/";
+        //Change this to the database name NOT THE DATABASE TABLE NAME
         String dbName = "2016_ajh3";
+        
         String driver = "com.mysql.jdbc.Driver";
-        String userName = "ajh3";
+        //insert username that you would use to connect to the database 
+        String userName = "";
+        //insert password that you would use to connect to the database
         String password = "";
 
         try {
@@ -39,7 +43,8 @@ public class DatabaseConnection {
 
                 System.out.println(id + "\t" + gamesPlayed + "\t" + wins + "\t" + losses);
             }
-//                       
+//  always close the connection
+            
             conn.close();
         } catch (Exception e) {
             e.printStackTrace();
